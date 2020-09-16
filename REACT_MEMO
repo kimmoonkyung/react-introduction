@@ -56,11 +56,12 @@ function에서는 {this.props.xxx} 사용 안됨
 
 * props are read only
 * props can not be modified
+
 --state
 데이터를 갖다 쓰는 용도.
 
-state changes can be asynchronous
-state can be modified using this.setStae({  })
+* state changes can be asynchronous
+* state can be modified using this.setStae({  })
 --setState
 this.setState({
   mode : "welcome"
@@ -73,4 +74,13 @@ this.setState({
 .bind(this)
 
 --Immutable
+불변.
+immutable.js
 
+--router
+React Router
+
+--redux
+
+
+--react server side rendering
