@@ -1,0 +1,31 @@
+--디렉토리 생성
+mkdir '폴더명'
+
+
+--파일, 디렉토리 삭제
+rm text.txt
+text.txt 파일 지우기.
+
+rm -f text.txt
+text.txt 파일을 묻지 않고 지우기.
+
+$rm *
+현재 작업중이 directory의 모든 파일 지우기.
+
+$rm -f *
+묻지도 따지지도 않고 다 지우기.
+
+rm -i *
+파일 하나하나 물어보고 지우기.
+
+rm -I *
+전체 파일 한번만 물어보고 다 지우기.
+
+rm -r directory1
+directory1 폴더 및 안의 파일 다 지우기.
+
+rm -rf directory1
+묻지도 따지지도 않고 다 지우기. (-f 옵션 + -r 옵션)
+
+
+--

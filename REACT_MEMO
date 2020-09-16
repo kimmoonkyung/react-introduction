@@ -1,0 +1,76 @@
+--react 설치
+설치할 폴더로 이동하여 'create-react-app .'
+. 은 현재경로
+
+--샘플 실행
+vscode terminal에서 'npm run start'
+--종료
+vscode terminal에서 'ctrl + c'
+
+--bulid 실행 ( ** 공백 등 같은 불필요한 것들을 제거 하여 용량을 줄인다. -> 실제로 (서비스)배포시 빌드안에 있는 파일을 배포한다. 실서버 환경)
+vscode terminal에서  'npm run build'
+
+--npm으로 설치하는 간단한 웹 서버
+'npm install -g serve'
+-> 어디에서나 serve 명령어로 서버를 설치할 수 있다.
+'npx serve -s build'
+-> '-s build' 서브라는 웹서버를 받아서 실행시킬때 'build' 라는 생성한 디렉토리를 document 루트로 하겠다. 
+
+--이것은 js 문법이 아니고, jsx 문법이다.
+class App extends Component {
+  render() {
+    return (
+      <div className="Subject">
+        <Subject></Subject>
+     </div>
+    )
+  }
+}
+
+--리액트 코드 작성시
+import React, { Component } from 'react';
+export default 'JS파일명'
+는 필수로 적어야 된다고 생각하면 된다.
+
+--Component 만드는 법.
+1. function으로 생성
+-> function App() {
+    return (
+        코드 작성
+    )
+}
+2. class로 생성
+-> class App extends Component {
+    render() {
+        return (
+            코드 작성
+        )
+    }
+}
+
+
+--props
+사용자가 컴포넌트를 사용하는 입장에서 중요한것 
+function에서는 {this.props.xxx} 사용 안됨
+çlass는 사용 가능. function에서는 어떻게 ?
+
+* props are read only
+* props can not be modified
+--state
+데이터를 갖다 쓰는 용도.
+
+state changes can be asynchronous
+state can be modified using this.setStae({  })
+--setState
+this.setState({
+  mode : "welcome"
+})
+
+
+--key
+
+--bind
+.bind(this)
+
+--Immutable
+
