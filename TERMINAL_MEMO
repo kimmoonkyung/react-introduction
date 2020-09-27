@@ -4,6 +4,9 @@ mkdir '폴더명'
 --현재 경로
 pwd
 
+--현재 경로 폴더 열기
+open .
+
 --새 탭 열기
 cmd + T
 
@@ -95,3 +98,14 @@ $ set -o vi
 --Emacs 모드 변경
 $ set -o emacs
 
+--현재 실행중인 작업 확인
+jobs
+ps -ef | grep [pid or name]
+
+--nohup
+sudo nohup java -jar backend.jar &
+--nohup 실행한것 죽이기
+sudo kill -9 [pid]
+
+--jar 실행
+sudo java -jar aaa.jar

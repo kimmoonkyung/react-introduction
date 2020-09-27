@@ -148,7 +148,25 @@ docker run -d -p 8080:80 \
     -> select * from wp_users;
 
 
---docker compose
+--*docker compose
 docker-compose.yml 설정 후
     -> docker-compose up -d (시작)
     -> docker-compose down  (종료)
+
+--이미지 만들고 배포.
+이미지란
+도커는 레이어드 파일 시스템 기반
+ex) AUFS, BTRFS, Overlayfs, ...
+이미지는 프로세스가 실행되는 파일들의 집합(환경)
+프로세스는 환경(파일)을 변경할 수 있음
+이 환경을 저장해서 새로운 이미지 파일을 만든다.
+
+--예시 - git 설치
+docker run -it --name git ubuntu:latest bash
+    -> ubuntu:latest 설치후 git 설치 확인
+    -> root@afafaafa:/# git
+        -> git: command not found
+    -> apt-get update
+    -> apt-get install -y git
+    -> git --version
+        -> 깃 버전 2.17.1

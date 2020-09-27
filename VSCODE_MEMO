@@ -6,3 +6,9 @@ cmd + 방향키 (윈도우에서는 Home, End 키 등으로 이동 됐었는데 
 
 --터미널에서 열기
 cd '폴더' -> code .
+
+--파일 삭제
+cmd + backspace
+
+--라인 삭제
+shift + cmd + k
