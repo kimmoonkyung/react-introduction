@@ -16,7 +16,7 @@
 --Chapter 2. 리액트 생성
     1. 스프링부트 설치 디렉토리 (ex com.example.demo면 )
        demo/ 디렉토리 터미널에서
-       npx create-react-app '폴더명'
+       npm create-react-app '폴더명'
         > demo/'폴더명' 생성됨.
     2. 해당 디렉토리 터미널엥서 'yarn start' or 'npm start'
         > 실행 확인
@@ -163,3 +163,7 @@
     4. 터미널에서 실행
         java -jar aaa.jar
             >http://localhost:8080/
+
+--참고
+1. https://github.com/kantega/react-and-spring
+2. https://sundries-in-myidea.tistory.com/71

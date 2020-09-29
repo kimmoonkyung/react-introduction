@@ -109,3 +109,61 @@ sudo kill -9 [pid]
 
 --jar 실행
 sudo java -jar aaa.jar
+
+
+--zsh 설치
+brew install zsh
+--zsh 설치 경로 확인
+which zsh
+--기본 쉘 변경
+chsh -s $(which zsh)
+--zsh 테마 변경
+cd .oh-my-zsh
+sudo code .zshrc
+
+--New Line 적용하기(옵션)
+vi ~/.oh-my-zsh/themes/agnoster.zsh-theme
+//or
+open -a TextEdit ~/.oh-my-zsh/themes/agnoster.zsh-theme
+
+build_prompt() {
+  RETVAL=$?
+  prompt_status
+  prompt_virtualenv
+  prompt_context
+  prompt_dir
+  prompt_git
+  prompt_bzr
+  prompt_hg
+  prompt_newline //이부분을 추가 꼭 순서 지켜서
+  prompt_end
+}
+
+prompt_newline() {
+  if [[ -n $CURRENT_BG ]]; then
+    echo -n "%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR
+%{%k%F{blue}%}$SEGMENT_SEPARATOR"
+  else
+    echo -n "%{%k%}"
+  fi
+
+  echo -n "%{%f%}"
+  CURRENT_BG=''
+}
+
+--Syntax Hightlight 적용하기 (옵션)
+-->brew를 통해 설치해줍니다.
+brew install zsh-syntax-highlighting
+-->플러그인을 적용합니다.
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+--플러그인 디렉토리로 이동
+cd /Users/kimmoonkyung/.oh-my-zsh/custom/plugins
+--zsh-syntax-highlighting 설치
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+--zsh-autosuggestions 설치
+git clone https://github.com/zsh-users/zsh-autosuggestions
+
+vi ~/.zshrc
+    > plugins=(git) 해당 부분 수정
+        > plugins=(git zhs-syntax-highlighting zsh-autosuggestions)
