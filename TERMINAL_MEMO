@@ -167,3 +167,16 @@ git clone https://github.com/zsh-users/zsh-autosuggestions
 vi ~/.zshrc
     > plugins=(git) 해당 부분 수정
         > plugins=(git zhs-syntax-highlighting zsh-autosuggestions)
+
+
+--cat명령어에 코드 하이라이팅 + more 기능이 추가된 버전입니다.
+brew install bat
+~/.zshrc에 cat 대신 사용하도록 설정할 수 있습니다.
+alias cat="bat"
+
+--nivm 설치
+~/.zshrc에
+alias vim="nvim"
+alias vi="nvim"
+alias vimdiff="nvim -d"
+export EDITOR=/usr/local/bin/nvim
