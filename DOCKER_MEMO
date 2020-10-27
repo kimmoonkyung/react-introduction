@@ -35,6 +35,9 @@ docker logs [id]
     -> docker container start [name]
     -> docker ps 
 
+--도커 컨테이너 정지
+    -> docker stop [컨테이너id]
+
 --pull
 docker pull ubuntu:18.04
 
@@ -79,6 +82,11 @@ docker run -d -p 3306:3306 \
     mysql:5.7
         -> localhost:8080 접속시 db 연결 실패로 나옴.
 
+--도커 실행 되어 있지 않을 때 에러
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+    -> ps -ef | grep docker 혹은 docker info 
+        -> 데몬 실행 명령어를 좀 확인해봐야겠음.
+        -> 도커 앱 실행하니 일단 됨.
 
 --도커 설치 확인 및 버젼 확인 명령어
 docker version
@@ -206,3 +214,33 @@ ONBUILD 다른 빌드의 베이스로 사용 될 때 사용하는 명령어
 --dockerignore
 .dockerignore 파일 생성
 
+--Dockerfiles 작성 (이미지 만들기)
+-- https://docs.docker.com/engine/reference/builder/
+COPY 파일 또는 디렉토리 추가
+    > COPY index.html /var/www/html/
+    > COPY ./app /usr/src/app
+RUN 명령어 실행
+    > RUN apt-get update
+    > RUN npm install
+EXPOSE 컨테이너에서 사용하는 포트 정보
+    > EXPOSE 8000
+CMD 컨테이너 생성시 실행할 명령어
+    > CMD ["node","app.js"]
+    > CMD node app.js
+WORKDIR 작업 디렉토리 변경
+    > WORKDIR/app 
+
+--도커 허브(docker hub) 이미지 관리
+-- hub.docker.com
+-- push > docker hub > pull
+이미지 저장 명령어
+docker login
+docker push {ID}/example
+docker pull {ID}/example
+
+--배포하기
+docker run -d -p 3000:3000 '경로'
+    > 컨테이너 실행 = 이미지 pull + 컨테이너 start
+
+--개인실습 Nginx를 이용한 정적 페이지 서버 만들기 
+부터시작
