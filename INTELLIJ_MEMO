@@ -6,3 +6,9 @@
 
 -- 액션/옵션 검색 단축키 
 [ Shift + command + A ]
+
+-- RUN 단축키 (수정)
+[ CMD + SHIFT + 1 ]
+
+-- 자동완성 단축키
+[ CMD + SPACE ]
