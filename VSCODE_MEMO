@@ -12,3 +12,12 @@ cmd + backspace
 
 --라인 삭제
 shift + cmd + k
+
+-- 깃 커밋
+    1. git add .
+    2. git commit -m "메시지"
+    3. git push romote_name branch_name 
+       : add하고 commit한 코드 git server에 보내기 
+       (git push origin master)
+       vs code 
+        > 상단 ... 클릭 > Pull, Push > Push to 클릭
